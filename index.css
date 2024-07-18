@@ -1,25 +1,76 @@
+* {
+    box-sizing: border-box;
+}
+
 html, body {
-    margin: 0;
+    
+    font-family: "Inter", sans-serif;
+    color: #D5D4D8;
+    margin: 0 auto;
     padding: 0;
     max-width: 680px;
+    min-width: 412px;
+    max-height: 550PX;
+    background-color: #3D4B60;
+}
+
+body {
+    
+}
+
+#container {
+    max-width: 680px;
+    min-width: 412px;
+    max-height: 550PX;
+    background-color: #1F2937;
+    padding:0.5rem;
+    border-radius: 1rem;
 }
 
 header {
     height: 5.6em;
     display: flex;
-    flex-basis: auto;
-    flex-grow: 1;
+    flex: auto;
     justify-content: space-between;
     align-items: center;
-    padding: 0 1rem;
+    padding: 0.5rem 1rem;
 }
 
 button, input, select {
     height: 42px;
+    color: #D5D4D8;
+}
+select {
+    border: 2px solid #D5D4D8;
+    border-radius: 0.3rem;
+    background-color: #1F2937;
+    color: #D5D4D8;
+    padding-left: 1rem;
+    width: 70%;
+}
+
+button{
+    border: none;
+    border-radius: 0.2rem;
+    background-color: #3D4B60;
+}
+
+button:hover {
+    background-color: gray;
+}
+
+select:hover, 
+button:hover, 
+input:hover,
+#hex-code:hover,
+#color-container:hover
+{
+    cursor: pointer;
 }
 
 #swatch-container {
     display: flex;
+    height: 80%;
 }
 #color-container {
     height: 100%;
@@ -30,6 +81,6 @@ button, input, select {
     display: flex;
     flex-direction: column;
     width: 100%;
-    height: 60vh;
+    height: 100%;
     align-items: center;
 }

@@ -16,10 +16,10 @@ function renderColors (colorData) {
     html = ""
     console.log(colorData)
     colorData.colors.forEach(color => {
-        html += `<div id="color-column">
-                <div id="color-container" style="background-color:${color.hex.value}">
+        html += `<div id="color-column" >
+                <div id="color-container" data-hexcode="${color.hex.value}" style="background-color:${color.hex.value}">
                 </div>
-                <p id="hex-code">${color.hex.value}</p>
+                <p id="hex-code" data-hexcode="${color.hex.value}">${color.hex.value}</p>
                 </div>
                 `
     })
@@ -27,3 +27,11 @@ function renderColors (colorData) {
     document.getElementById('swatch-container').innerHTML = html
 
 }
+
+document.addEventListener('click', function(e){
+    if(e.target.dataset.hexcode){
+        navigator.clipboard.writeText(e.target.dataset.hexcode)
+        console.log(e.target.dataset.hexcode)
+        alert(`${e.target.dataset.hexcode} copied to clipboard!`)
+    } 
+})
