@@ -13,7 +13,7 @@ getSchemeBtn.addEventListener('click', ()=> {
 })
 
 function renderColors (colorData) {
-    html = ""
+    let html = ""
     console.log(colorData)
     colorData.colors.forEach(color => {
         html += `<div id="color-column" >
